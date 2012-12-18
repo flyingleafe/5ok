@@ -18,7 +18,10 @@ group :assets do
   gem 'compass-rails'
 
   # See https://github.com/sstephenson/execjs#readme for more supported runtimes
-  # gem 'therubyracer', :platforms => :ruby
+  gem 'libv8', '~> 3.11.8'
+  gem 'therubyracer', :platforms => :ruby
+
+  gem 'execjs'
 
   gem 'uglifier', '>= 1.0.3'
 end
@@ -40,8 +43,5 @@ gem 'capistrano'
 # To use debugger
 gem 'debugger'
 
-# ExecJS
-gem 'execjs'
-
 # Ruby Racer
-gem 'therubyracer' 
+#gem 'therubyracer' 
