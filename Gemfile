@@ -18,8 +18,7 @@ group :assets do
   gem 'compass-rails'
 
   # See https://github.com/sstephenson/execjs#readme for more supported runtimes
-  gem 'libv8', '~> 3.11.8'
-  gem 'therubyracer', :platforms => :ruby
+  gem 'therubyracer', :platforms => :ruby, :require => 'v8'
 
   gem 'execjs'
 
