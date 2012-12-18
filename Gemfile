@@ -15,6 +15,7 @@ gem 'pg'
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'
   gem 'coffee-rails', '~> 3.2.1'
+  gem 'haml'
   gem 'compass-rails'
 
   # See https://github.com/sstephenson/execjs#readme for more supported runtimes
@@ -27,6 +28,11 @@ end
 
 gem 'jquery-rails'
 
+gem 'postgres_ext'
+
+# Redis support
+gem "redis", "~> 3.0.2"
+
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
 
@@ -36,11 +42,17 @@ gem 'jquery-rails'
 # Use unicorn as the app server
 gem 'unicorn'
 
-# Deploy with Capistrano
-gem 'capistrano'
+group :development do
+	# Deploy with Capistrano
+	gem 'capistrano'
 
-# To use debugger
-gem 'debugger'
+	# To use debugger
+	gem 'debugger'
 
-# Ruby Racer
-#gem 'therubyracer' 
+	gem "rspec", "~> 2.12.0"
+end
+
+group :test do
+	gem "rspec", "~> 2.12.0"
+	gem "webrat", "~> 0.7.3"
+end
