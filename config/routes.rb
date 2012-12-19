@@ -1,6 +1,7 @@
 PyatachokRails::Application.routes.draw do
-  resources :users
+  get "static/about"
 
+  resources :users
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

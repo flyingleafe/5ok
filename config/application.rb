@@ -58,5 +58,12 @@ module PyatachokRails
 
     # Version of your assets, change this if you want to expire all your assets
     config.assets.version = '1.0'
+
+    # Use the indent-based syntax of Sass
+    config.sass.preferred_syntax = :sass
+
+    config.generators do |g|
+        g.template_engine :haml
+    end
   end
 end
