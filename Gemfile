@@ -10,6 +10,8 @@ gem 'rails', '3.2.9'
 # PostgreSQL
 gem 'pg'
 
+gem 'rails-i18n'
+
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
@@ -50,9 +52,12 @@ group :development do
 	gem 'debugger'
 
 	gem "rspec", "~> 2.12.0"
+  gem "rspec-rails", "~> 2.12.0"
 end
 
 group :test do
+  gem "spork", "~> 0.9.2"
+
 	gem "rspec", "~> 2.12.0"
 	gem "webrat", "~> 0.7.3"
 end
